@@ -45,9 +45,12 @@
     }
 
     @media screen and (min-width: 768px) {
-        .cls-8:hover, .cls-9:hover {
-                background-color: rgba(79,200,233,0.6);
+        .cls-8:hover {
+                background-color: #6e8c98;
             }
+        .cls-9:hover {
+            background-color: #cfb679;
+        }
         }
     
     h4 {
@@ -63,10 +66,10 @@
     }
 
     .buttonToggle {
-        background-color: sienna;
+        background-color: #869fa9;
     }
     .buttonToggle2 {
-        background-color: violet;
+        background-color: #dfcea6;
     }
 
     .baseLayer {
@@ -85,374 +88,378 @@
     <div id="mapContain">
         <img class="baseLayer" src="Images/Basemap.jpg" />
         <div id="vectorBox" preserveAspectRatio="none" >
-            <img id="roadsi" class="midLayer, nonDisplay" src="Images/Roads.jpg" />
-            <div id="parksi" class="midLayer, nonDisplay">
+            <div id="roadsi" class="midLayer nonDisplay"> 
+              <img src="Images/Roads.jpg" />
+              <img src="Images/ExistingAccess.png" />
+            </div>
+            <div id="parksi" class="midLayer nonDisplay">
                 <img src="Images/Parks.png" />
                 <style type="text/css">
-                    .tg  {border-collapse:collapse;border-spacing:0;}
-                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                      overflow:hidden;padding:3px 20px;word-break:normal;}
-                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                      font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
-                    .tg .tg-v4jz{color:#8A2787;font-weight:bold;text-align:left;vertical-align:bottom}
-                    .tg .tg-sza0{color:#39AD4A;font-weight:bold;text-align:left;vertical-align:bottom}
-                    .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
-                    .tg .tg-7zrl{text-align:left;vertical-align:bottom}
-                    .tg .tg-8rgk{color:#B61E2D;font-weight:bold;text-align:left;vertical-align:bottom}
-                    .tg .tg-nyri{color:#F3A840;font-weight:bold;text-align:left;vertical-align:bottom}
-                    </style>
-                    <table class="tg"><thead>
-                      <tr>
-                        <th class="tg-u84o">Category</th>
-                        <th class="tg-u84o">Number</th>
-                        <th class="tg-u84o">Name</th>
-                        <th class="tg-u84o">Category</th>
-                        <th class="tg-u84o">Number</th>
-                        <th class="tg-u84o">Name</th>
-                      </tr></thead>
-                    <tbody>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">1</td>
-                        <td class="tg-7zrl">Nexus</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">10</td>
-                        <td class="tg-7zrl">JAG Logistics Center</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">2</td>
-                        <td class="tg-7zrl">JAG Logistics Center</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">11</td>
-                        <td class="tg-7zrl">Highpoint</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">3</td>
-                        <td class="tg-7zrl">Highpoint</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">12</td>
-                        <td class="tg-7zrl">DIA Logistics Park - South</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">4</td>
-                        <td class="tg-7zrl">DIA Logistics Park - North</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">13</td>
-                        <td class="tg-7zrl">Windler</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">5</td>
-                        <td class="tg-7zrl">Majestic Commerce Center</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">14</td>
-                        <td class="tg-7zrl">Majestic Commerce Center</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">6</td>
-                        <td class="tg-7zrl">Prologis Park 70</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">15</td>
-                        <td class="tg-7zrl">Aero 70</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">7</td>
-                        <td class="tg-7zrl">First Aurora Commerce Ceter</td>
-                        <td class="tg-7zrl">Planned</td>
-                        <td class="tg-8rgk">16</td>
-                        <td class="tg-7zrl">Porteos</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Existing</td>
-                        <td class="tg-sza0">8</td>
-                        <td class="tg-7zrl">Gateway Park</td>
-                        <td class="tg-7zrl">Mixed-Use/Others</td>
-                        <td class="tg-v4jz">17</td>
-                        <td class="tg-7zrl">DIA Land</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-7zrl">Under Construction</td>
-                        <td class="tg-nyri">9</td>
-                        <td class="tg-7zrl">Sun Empire</td>
-                        <td class="tg-7zrl">Mixed-Use/Others</td>
-                        <td class="tg-v4jz">18</td>
-                        <td class="tg-7zrl">Pena Station Next</td>
-                      </tr>
-                    </tbody></table>
+                  .tg  {border-collapse:collapse;border-spacing:0;}
+                  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg .tg-qppw{background-color:#FCE9D0;color:#F3A840;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-ai3x{background-color:#FDD;color:#B61E2D;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-74e1{background-color:#E8D9F3;color:#8A2787;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-offj{background-color:#FCE9D0;text-align:left;vertical-align:bottom}
+                  .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
+                  .tg .tg-u7if{background-color:#C9EDCE;text-align:left;vertical-align:bottom}
+                  .tg .tg-d998{background-color:#C9EDCE;color:#39AD4A;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-wihs{background-color:#FDD;text-align:left;vertical-align:bottom}
+                  .tg .tg-ckdl{background-color:#E8D9F3;text-align:left;vertical-align:bottom}
+                  </style>
+                  <table class="tg"><thead>
+                    <tr>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">1</td>
+                      <td class="tg-u7if">Nexus</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">10</td>
+                      <td class="tg-wihs">JAG Logistics Center</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">2</td>
+                      <td class="tg-u7if">JAG Logistics Center</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">11</td>
+                      <td class="tg-wihs">Highpoint</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">3</td>
+                      <td class="tg-u7if">Highpoint</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">12</td>
+                      <td class="tg-wihs">DIA Logistics Park - South</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">4</td>
+                      <td class="tg-u7if">DIA Logistics Park - North</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">13</td>
+                      <td class="tg-wihs">Windler</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">5</td>
+                      <td class="tg-u7if">Majestic Commerce Center</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">14</td>
+                      <td class="tg-wihs">Majestic Commerce Center</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">6</td>
+                      <td class="tg-u7if">Prologis Park 70</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">15</td>
+                      <td class="tg-wihs">Aero 70</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">7</td>
+                      <td class="tg-u7if">First Aurora Commerce Ceter</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">16</td>
+                      <td class="tg-wihs">Porteos</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">8</td>
+                      <td class="tg-u7if">Gateway Park</td>
+                      <td class="tg-ckdl">Mixed-Use/Others</td>
+                      <td class="tg-74e1">17</td>
+                      <td class="tg-ckdl">DIA Land</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-offj">Under Construction</td>
+                      <td class="tg-qppw">9</td>
+                      <td class="tg-offj">Sun Empire</td>
+                      <td class="tg-ckdl">Mixed-Use/Others</td>
+                      <td class="tg-74e1">18</td>
+                      <td class="tg-ckdl">Pena Station Next</td>
+                    </tr>
+                  </tbody></table>
             </div>
             <div id="occupiersi" class="nonDisplay">
                 <img src="Images/Occupiers.png" />
                 <style type="text/css">
-                    .tg  {border-collapse:collapse;border-spacing:0;}
-                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                      overflow:hidden;padding:3px 20px;word-break:normal;}
-                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                      font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
-                    .tg .tg-cly1{text-align:left;vertical-align:middle}
-                    .tg .tg-njk9{color:#27A2D9;font-weight:bold;text-align:left;vertical-align:middle}
-                    </style>
-                    <table class="tg"><thead>
-                      <tr>
-                        <th class="tg-njk9">1</th>
-                        <th class="tg-cly1">Pepsi</th>
-                        <th class="tg-njk9">13</th>
-                        <th class="tg-cly1">Hawthorne Gardening Company</th>
-                        <th class="tg-njk9">24</th>
-                        <th class="tg-cly1">Hilton Garden Inn</th>
-                      </tr></thead>
-                    <tbody>
-                      <tr>
-                        <td class="tg-njk9">2</td>
-                        <td class="tg-cly1">Panasonic</td>
-                        <td class="tg-njk9">14</td>
-                        <td class="tg-cly1">PrimeSource Building Products, Inc.</td>
-                        <td class="tg-njk9">25</td>
-                        <td class="tg-cly1">Xcek Energy</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">3</td>
-                        <td class="tg-cly1">Dollar General</td>
-                        <td class="tg-njk9">15</td>
-                        <td class="tg-cly1">Lone Star Logistics LLC</td>
-                        <td class="tg-njk9">26</td>
-                        <td class="tg-cly1">Amazon</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">4</td>
-                        <td class="tg-cly1">Costco</td>
-                        <td class="tg-njk9">16</td>
-                        <td class="tg-cly1">Western Industrial Contractors Inc.</td>
-                        <td class="tg-njk9">27</td>
-                        <td class="tg-cly1">Lowes</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">5</td>
-                        <td class="tg-cly1">Kroger</td>
-                        <td class="tg-njk9">17</td>
-                        <td class="tg-cly1">MAI Mechanical, LLC</td>
-                        <td class="tg-njk9">28</td>
-                        <td class="tg-cly1">Gaylord Resort</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">6</td>
-                        <td class="tg-cly1">Microsoft</td>
-                        <td class="tg-njk9">18</td>
-                        <td class="tg-cly1">FTI</td>
-                        <td class="tg-njk9">29</td>
-                        <td class="tg-cly1">Global Parcel Delivery</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">7</td>
-                        <td class="tg-cly1">Fedex</td>
-                        <td class="tg-njk9">19</td>
-                        <td class="tg-cly1">Allied Insulation</td>
-                        <td class="tg-njk9">30</td>
-                        <td class="tg-cly1">Flight Safety International</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">8</td>
-                        <td class="tg-cly1">Walmart</td>
-                        <td class="tg-njk9">20</td>
-                        <td class="tg-cly1">Fraser Trucking Inc.</td>
-                        <td class="tg-njk9">31</td>
-                        <td class="tg-cly1">Hyatt Place Hotel</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">9</td>
-                        <td class="tg-cly1">Shamrock Foods</td>
-                        <td class="tg-njk9">21</td>
-                        <td class="tg-cly1">Ceva Logistics</td>
-                        <td class="tg-njk9">32</td>
-                        <td class="tg-cly1">GE Haier</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">10</td>
-                        <td class="tg-cly1">Karcher</td>
-                        <td class="tg-njk9">22</td>
-                        <td class="tg-cly1">Whole Foods</td>
-                        <td class="tg-njk9">33</td>
-                        <td class="tg-cly1">McLane</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">11</td>
-                        <td class="tg-cly1">Coca-Cola</td>
-                        <td class="tg-njk9">23</td>
-                        <td class="tg-cly1">Towneplace Suites</td>
-                        <td class="tg-njk9">34</td>
-                        <td class="tg-cly1">TJX</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-njk9">12</td>
-                        <td class="tg-cly1">Ryder</td>
-                        <td class="tg-cly1"></td>
-                        <td class="tg-cly1"></td>
-                        <td class="tg-cly1"></td>
-                        <td class="tg-cly1"></td>
-                      </tr>
-                    </tbody></table>
+                  .tg  {border-collapse:collapse;border-spacing:0;}
+                  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
+                  .tg .tg-7zrl{text-align:left;vertical-align:bottom}
+                  .tg .tg-859v{color:#27A2D9;font-weight:bold;text-align:left;vertical-align:bottom}
+                  </style>
+                  <table class="tg"><thead>
+                    <tr>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-7zrl"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-7zrl"></th>
+                      <th class="tg-u84o">Name</th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-859v">1</td>
+                      <td class="tg-7zrl">Pepsi</td>
+                      <td class="tg-859v">13</td>
+                      <td class="tg-7zrl">Hawthorne Gardening Company</td>
+                      <td class="tg-859v">24</td>
+                      <td class="tg-7zrl">Hilton Garden Inn</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">2</td>
+                      <td class="tg-7zrl">Panasonic</td>
+                      <td class="tg-859v">14</td>
+                      <td class="tg-7zrl">PrimeSource Building Products, Inc.</td>
+                      <td class="tg-859v">25</td>
+                      <td class="tg-7zrl">Xcek Energy</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">3</td>
+                      <td class="tg-7zrl">Dollar General</td>
+                      <td class="tg-859v">15</td>
+                      <td class="tg-7zrl">Lone Star Logistics LLC</td>
+                      <td class="tg-859v">26</td>
+                      <td class="tg-7zrl">Amazon</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">4</td>
+                      <td class="tg-7zrl">Costco</td>
+                      <td class="tg-859v">16</td>
+                      <td class="tg-7zrl">Western Industrial Contractors Inc.</td>
+                      <td class="tg-859v">27</td>
+                      <td class="tg-7zrl">Lowes</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">5</td>
+                      <td class="tg-7zrl">Kroger</td>
+                      <td class="tg-859v">17</td>
+                      <td class="tg-7zrl">MAI Mechanical, LLC</td>
+                      <td class="tg-859v">28</td>
+                      <td class="tg-7zrl">Gaylord Resort</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">6</td>
+                      <td class="tg-7zrl">Microsoft</td>
+                      <td class="tg-859v">18</td>
+                      <td class="tg-7zrl">FTI</td>
+                      <td class="tg-859v">29</td>
+                      <td class="tg-7zrl">Global Parcel Delivery</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">7</td>
+                      <td class="tg-7zrl">Fedex</td>
+                      <td class="tg-859v">19</td>
+                      <td class="tg-7zrl">Allied Insulation</td>
+                      <td class="tg-859v">30</td>
+                      <td class="tg-7zrl">Flight Safety International</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">8</td>
+                      <td class="tg-7zrl">Walmart</td>
+                      <td class="tg-859v">20</td>
+                      <td class="tg-7zrl">Fraser Trucking Inc.</td>
+                      <td class="tg-859v">31</td>
+                      <td class="tg-7zrl">Hyatt Place Hotel</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">9</td>
+                      <td class="tg-7zrl">Shamrock Foods</td>
+                      <td class="tg-859v">21</td>
+                      <td class="tg-7zrl">Ceva Logistics</td>
+                      <td class="tg-859v">32</td>
+                      <td class="tg-7zrl">GE Haier</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">10</td>
+                      <td class="tg-7zrl">Karcher</td>
+                      <td class="tg-859v">22</td>
+                      <td class="tg-7zrl">Whole Foods</td>
+                      <td class="tg-859v">33</td>
+                      <td class="tg-7zrl">McLane</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">11</td>
+                      <td class="tg-7zrl">Coca-Cola</td>
+                      <td class="tg-859v">23</td>
+                      <td class="tg-7zrl">Towneplace Suites</td>
+                      <td class="tg-859v">34</td>
+                      <td class="tg-7zrl">TJX</td>
+                    </tr>
+                  </tbody></table>
             </div>
             <div id="residentiali" class="nonDisplay">
                 <img src="Images/Residential.png" />
                 <style type="text/css">
-                    .tg  {border-collapse:collapse;border-spacing:0;}
-                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                      overflow:hidden;padding:3px 20px;word-break:normal;}
-                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                      font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
-                    .tg .tg-xec7{border-color:inherit;color:#527080;font-weight:bold;text-align:left;vertical-align:bottom}
-                    .tg .tg-l7jj{border-color:inherit;font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
-                    .tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
-                    .tg .tg-w6hs{border-color:inherit;color:#7F7C7A;font-weight:bold;text-align:left;vertical-align:bottom}
-                    </style>
-                    <table class="tg"><thead>
-                      <tr>
-                        <th class="tg-l7jj">Category</th>
-                        <th class="tg-l7jj">Number</th>
-                        <th class="tg-l7jj">Name</th>
-                        <th class="tg-l7jj">Category</th>
-                        <th class="tg-l7jj">Number</th>
-                        <th class="tg-l7jj">Name</th>
-                      </tr></thead>
-                    <tbody>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">1</td>
-                        <td class="tg-za14">Peña Station NEXT</td>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">15</td>
-                        <td class="tg-za14">Green Valley Ranch East</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">2</td>
-                        <td class="tg-za14">Altaria @ High Point</td>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">16</td>
-                        <td class="tg-za14">Green Valley Ranch</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">3</td>
-                        <td class="tg-za14">High Point</td>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">17</td>
-                        <td class="tg-za14">Incline 45</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">4</td>
-                        <td class="tg-za14">High Point - The Grove</td>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">18</td>
-                        <td class="tg-za14">Gateway GVR</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">5</td>
-                        <td class="tg-za14">Painted Prairie</td>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">19</td>
-                        <td class="tg-za14">First Creek Village</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">6</td>
-                        <td class="tg-za14">East Range Crossing</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">20</td>
-                        <td class="tg-za14">Sky View @ High Point</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">7</td>
-                        <td class="tg-za14">Wildhorse Ridge</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">21</td>
-                        <td class="tg-za14">Hilltop at DIA</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">8</td>
-                        <td class="tg-za14">First Creek</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">22</td>
-                        <td class="tg-za14">Sky Dance</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">9</td>
-                        <td class="tg-za14">Singletree</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">23</td>
-                        <td class="tg-za14">Banyan High Point</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">10</td>
-                        <td class="tg-za14">First Creek Farm</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">24</td>
-                        <td class="tg-za14">Alexan Pena Station</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">11</td>
-                        <td class="tg-za14">Courtland</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">25</td>
-                        <td class="tg-za14">Cottages at Gateway</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">12</td>
-                        <td class="tg-za14">Meadows at Dunkirk</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">26</td>
-                        <td class="tg-za14">Vista Creek</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">13</td>
-                        <td class="tg-za14">Reserve Green Valley Ranch</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">27</td>
-                        <td class="tg-za14">Windler Homestead</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-za14">Existing</td>
-                        <td class="tg-w6hs">14</td>
-                        <td class="tg-za14">Aurora Highlands</td>
-                        <td class="tg-za14">Future</td>
-                        <td class="tg-xec7">28</td>
-                        <td class="tg-za14">Alberta Development Land</td>
-                      </tr>
-                    </tbody></table>
+                  .tg  {border-collapse:collapse;border-spacing:0;}
+                  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg .tg-mivg{background-color:#CEDAE0;text-align:left;vertical-align:bottom}
+                  .tg .tg-r74l{background-color:#E6E6E6;text-align:left;vertical-align:bottom}
+                  .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
+                  .tg .tg-p1ht{background-color:#E6E6E6;color:#7F7C7A;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-188h{background-color:#CEDAE0;color:#527080;font-weight:bold;text-align:left;vertical-align:bottom}
+                  </style>
+                  <table class="tg"><thead>
+                    <tr>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">1</td>
+                      <td class="tg-r74l">Peña Station NEXT</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">15</td>
+                      <td class="tg-r74l">Green Valley Ranch East</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">2</td>
+                      <td class="tg-r74l">Altaria @ High Point</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">16</td>
+                      <td class="tg-r74l">Green Valley Ranch</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">3</td>
+                      <td class="tg-r74l">High Point</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">17</td>
+                      <td class="tg-r74l">Incline 45</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">4</td>
+                      <td class="tg-r74l">High Point - The Grove</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">18</td>
+                      <td class="tg-r74l">Gateway GVR</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">5</td>
+                      <td class="tg-r74l">Painted Prairie</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">19</td>
+                      <td class="tg-r74l">First Creek Village</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">6</td>
+                      <td class="tg-r74l">East Range Crossing</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">20</td>
+                      <td class="tg-mivg">Sky View @ High Point</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">7</td>
+                      <td class="tg-r74l">Wildhorse Ridge</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">21</td>
+                      <td class="tg-mivg">Hilltop at DIA</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">8</td>
+                      <td class="tg-r74l">First Creek</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">22</td>
+                      <td class="tg-mivg">Sky Dance</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">9</td>
+                      <td class="tg-r74l">Singletree</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">23</td>
+                      <td class="tg-mivg">Banyan High Point</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">10</td>
+                      <td class="tg-r74l">First Creek Farm</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">24</td>
+                      <td class="tg-mivg">Alexan Pena Station</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">11</td>
+                      <td class="tg-r74l">Courtland</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">25</td>
+                      <td class="tg-mivg">Cottages at Gateway</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">12</td>
+                      <td class="tg-r74l">Meadows at Dunkirk</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">26</td>
+                      <td class="tg-mivg">Vista Creek</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">13</td>
+                      <td class="tg-r74l">Reserve Green Valley Ranch</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">27</td>
+                      <td class="tg-mivg">Windler Homestead</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">14</td>
+                      <td class="tg-r74l">Aurora Highlands</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">28</td>
+                      <td class="tg-mivg">Alberta Development Land</td>
+                    </tr>
+                  </tbody></table>
             </div>
             <div id="amenitiesi" class="nonDisplay">
               <img src="Images/Amenities.png" />
             </div>
-            <img id="existingAccessi" class="midLayer, nonDisplay" src="Images/ExistingAccess.png" />
-            <img id="plannedAccessi" class="midLayer, nonDisplay" src="Images/PlannedAccess.png" />
-            <img id="sitei" class="topLayer, nonDisplay" src="Images/Site.png" />
+            <img id="plannedAccessi" class="midLayer nonDisplay" src="Images/PlannedAccess.png" />
+            <img id="sitei" class="topLayer nonDisplay mapToggle2" src="Images/Site2.png" />
         </div>
     </div>
     <div id="navBox">
-        <h4 id="roads" class="cls-9" tabindex="1"> 
-            Roads
+        <h4 id="site" class="cls-9 buttonToggle2" tabindex="2"> 
+          Site
         </h4>
-        <h4 id="existingAccess" class="cls-9" tabindex="1"> 
-            Existing Access
+        <h4 id="roads" class="cls-9" tabindex="1"> 
+            Roads & Access
         </h4>
         <h4 id="plannedAccess" class="cls-9" tabindex="1"> 
             Planned Access
-        </h4>
-        <h4 id="site" class="cls-9" tabindex="2"> 
-            Site
         </h4>
         <hr />
         <h4 id="parks" class="cls-8" tabindex="3"> 
