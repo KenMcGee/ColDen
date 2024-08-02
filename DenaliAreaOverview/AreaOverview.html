@@ -1,0 +1,182 @@
+<head>
+</head>
+<body>
+
+<style>
+    #wrapper {
+        max-width: 1200px;
+        text-align: center;
+        margin: 0 auto;
+        clear: both;
+        height: 100%;
+    }
+    #mapContain {
+        max-width: 75%;
+        position: relative;
+        top:0;
+        left:0;
+        text-align: center;
+        margin: 0 auto;
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    #mapContain img {
+        width: 100%;
+    }
+    #vectorBox {
+    }
+    #vectorBox img {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+    }
+    #navBox {
+        float: left;
+        width: 20%;
+    }
+    .nonDisplay {
+        display: none;
+    }
+    .cls-8 {
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        .cls-8:hover, .cls-9:hover {
+                background-color: rgba(79,200,233,0.6);
+            }
+        }
+    
+    h4 {
+        padding: 10px;
+        width: 60%;
+        margin: 5px auto;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+
+    .mapToggle, .mapToggle2 {
+        display: block;
+    }
+
+    .buttonToggle {
+        background-color: sienna;
+    }
+    .buttonToggle2 {
+        background-color: violet;
+    }
+
+    .baseLayer {
+        z-index: -1;
+    }
+    .midLayer {
+        z-index: 10;
+    }
+    .topLayer {
+        z-index: 20;
+    }
+
+
+</style>
+<div id="wrapper">
+    <div id="mapContain">
+        <img class="baseLayer" src="images/Basemap.jpg" />
+        <div id="vectorBox" preserveAspectRatio="none" >
+            <img id="roadsi" class="midLayer, nonDisplay" src="Images/Roads.jpg" />
+            <div id="parksi" class="midLayer, nonDisplay">
+                <img src="Images/Parks.png" />
+                <table>
+
+                </table>
+            </div>
+            <div id="occupiersi" class="nonDisplay">
+                <img src="Images/Occupiers.png" />
+                
+            </div>
+            <div id="residentiali" class="nonDisplay">
+                <img src="Images/Residential.png" />
+
+            </div>
+            <img id="existingAccessi" class="midLayer, nonDisplay" src="Images/ExistingAccess.png" />
+            <img id="plannedAccessi" class="midLayer, nonDisplay" src="Images/PlannedAccess.png" />
+            <img id="sitei" class="topLayer, nonDisplay" src="Images/Site.png" />
+        </div>
+    </div>
+    <div id="navBox">
+        <h4 id="roads" class="cls-9" tabindex="1"> 
+            Roads
+        </h4>
+        <h4 id="existingAccess" class="cls-9" tabindex="1"> 
+            Existing Access
+        </h4>
+        <h4 id="plannedAccess" class="cls-9" tabindex="1"> 
+            Planned Access
+        </h4>
+        <h4 id="site" class="cls-9" tabindex="2"> 
+            Site
+        </h4>
+        <hr />
+        <h4 id="parks" class="cls-8" tabindex="3"> 
+            Industrial Parks
+        </h4>
+        <h4 id="occupiers" class="cls-8" tabindex="4"> 
+            Occupiers
+        </h4>
+        <h4 id="residential" class="cls-8" tabindex="4"> 
+            Residential
+        </h4>
+    </div>
+</div>
+
+<script>
+            
+    function myFunction() {
+        var thisId = event.srcElement.id;
+        var imgID = thisId.toString().concat("i");
+        var element = document.getElementById(imgID);
+        var clear = document.getElementsByClassName("mapToggle");
+        var clear2 = document.getElementsByClassName("buttonToggle");
+
+        if (element.classList.contains("mapToggle")) {
+            element.classList.toggle("mapToggle");
+            event.srcElement.classList.toggle("buttonToggle");
+        } else {
+        for (let i = 0; i < clear.length; i++) {
+            clear[i].classList.toggle("mapToggle");
+        }
+        for (let i = 0; i < clear2.length; i++) {
+            clear2[i].classList.toggle("buttonToggle");
+        }
+        
+        element.classList.toggle("mapToggle");
+        event.srcElement.classList.toggle("buttonToggle");
+    }
+        
+    }
+
+    function myFunction2() {
+        var thisId2 = event.srcElement.id;
+        var imgID2 = thisId2.toString().concat("i");
+        var element2 = document.getElementById(imgID2);
+        element2.classList.toggle("mapToggle2");
+        event.srcElement.classList.toggle("buttonToggle2");
+    }
+
+
+    var clickClass = document.getElementsByClassName("cls-8");
+    for (let n = 0; n < clickClass.length; n++) {
+        clickClass[n].addEventListener("click", myFunction);
+    }
+
+    var clickClass2 = document.getElementsByClassName("cls-9");
+    for (let n = 0; n < clickClass2.length; n++) {
+        clickClass2[n].addEventListener("click", myFunction2);
+    }
+    
+</script>
+
+
+</body>
