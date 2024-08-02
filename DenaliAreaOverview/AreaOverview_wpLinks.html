@@ -1,0 +1,528 @@
+<head>
+</head>
+<body>
+
+<style>
+    #wrapper {
+        max-width: 1200px;
+        text-align: center;
+        margin: 0 auto;
+        clear: both;
+        height: 100%;
+    }
+    #mapContain {
+        max-width: 75%;
+        position: relative;
+        top:0;
+        left:0;
+        text-align: center;
+        margin: 0 auto;
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    #mapContain img {
+        width: 100%;
+    }
+    #vectorBox {
+    }
+    #vectorBox img {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+    }
+    #navBox {
+        float: left;
+        width: 20%;
+    }
+    .nonDisplay {
+        display: none;
+    }
+    .cls-8 {
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        .cls-8:hover {
+                background-color: #6e8c98;
+            }
+        .cls-9:hover {
+            background-color: #cfb679;
+        }
+        }
+    
+    h4 {
+        padding: 10px;
+        width: 60%;
+        margin: 5px auto;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+
+    .mapToggle, .mapToggle2 {
+        display: block;
+    }
+
+    .buttonToggle {
+        background-color: #869fa9;
+    }
+    .buttonToggle2 {
+        background-color: #dfcea6;
+    }
+
+    .baseLayer {
+        z-index: -1;
+    }
+    .midLayer {
+        z-index: 10;
+    }
+    .topLayer {
+        z-index: 20;
+    }
+
+
+</style>
+<div id="wrapper">
+    <div id="mapContain">
+        <img class="baseLayer" src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Basemap.jpg" />
+        <div id="vectorBox" preserveAspectRatio="none" >
+            <div id="roadsi" class="midLayer nonDisplay"> 
+              <img src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Roads.jpg" />
+              <img src="https://denalilogisticspark.com/wp-content/uploads/2024/08/ExistingAccess.png" />
+            </div>
+            <div id="parksi" class="midLayer nonDisplay">
+                <img src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Parks.png" />
+                <style type="text/css">
+                  .tg  {border-collapse:collapse;border-spacing:0;}
+                  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg .tg-qppw{background-color:#FCE9D0;color:#F3A840;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-ai3x{background-color:#FDD;color:#B61E2D;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-74e1{background-color:#E8D9F3;color:#8A2787;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-offj{background-color:#FCE9D0;text-align:left;vertical-align:bottom}
+                  .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
+                  .tg .tg-u7if{background-color:#C9EDCE;text-align:left;vertical-align:bottom}
+                  .tg .tg-d998{background-color:#C9EDCE;color:#39AD4A;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-wihs{background-color:#FDD;text-align:left;vertical-align:bottom}
+                  .tg .tg-ckdl{background-color:#E8D9F3;text-align:left;vertical-align:bottom}
+                  </style>
+                  <table class="tg"><thead>
+                    <tr>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">1</td>
+                      <td class="tg-u7if">Nexus</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">10</td>
+                      <td class="tg-wihs">JAG Logistics Center</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">2</td>
+                      <td class="tg-u7if">JAG Logistics Center</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">11</td>
+                      <td class="tg-wihs">Highpoint</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">3</td>
+                      <td class="tg-u7if">Highpoint</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">12</td>
+                      <td class="tg-wihs">DIA Logistics Park - South</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">4</td>
+                      <td class="tg-u7if">DIA Logistics Park - North</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">13</td>
+                      <td class="tg-wihs">Windler</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">5</td>
+                      <td class="tg-u7if">Majestic Commerce Center</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">14</td>
+                      <td class="tg-wihs">Majestic Commerce Center</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">6</td>
+                      <td class="tg-u7if">Prologis Park 70</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">15</td>
+                      <td class="tg-wihs">Aero 70</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">7</td>
+                      <td class="tg-u7if">First Aurora Commerce Ceter</td>
+                      <td class="tg-wihs">Planned</td>
+                      <td class="tg-ai3x">16</td>
+                      <td class="tg-wihs">Porteos</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-u7if">Existing</td>
+                      <td class="tg-d998">8</td>
+                      <td class="tg-u7if">Gateway Park</td>
+                      <td class="tg-ckdl">Mixed-Use/Others</td>
+                      <td class="tg-74e1">17</td>
+                      <td class="tg-ckdl">DIA Land</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-offj">Under Construction</td>
+                      <td class="tg-qppw">9</td>
+                      <td class="tg-offj">Sun Empire</td>
+                      <td class="tg-ckdl">Mixed-Use/Others</td>
+                      <td class="tg-74e1">18</td>
+                      <td class="tg-ckdl">Pena Station Next</td>
+                    </tr>
+                  </tbody></table>
+            </div>
+            <div id="occupiersi" class="nonDisplay">
+                <img src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Occupiers.png" />
+                <style type="text/css">
+                  .tg  {border-collapse:collapse;border-spacing:0;}
+                  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
+                  .tg .tg-7zrl{text-align:left;vertical-align:bottom}
+                  .tg .tg-859v{color:#27A2D9;font-weight:bold;text-align:left;vertical-align:bottom}
+                  </style>
+                  <table class="tg"><thead>
+                    <tr>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-7zrl"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-7zrl"></th>
+                      <th class="tg-u84o">Name</th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-859v">1</td>
+                      <td class="tg-7zrl">Pepsi</td>
+                      <td class="tg-859v">13</td>
+                      <td class="tg-7zrl">Hawthorne Gardening Company</td>
+                      <td class="tg-859v">24</td>
+                      <td class="tg-7zrl">Hilton Garden Inn</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">2</td>
+                      <td class="tg-7zrl">Panasonic</td>
+                      <td class="tg-859v">14</td>
+                      <td class="tg-7zrl">PrimeSource Building Products, Inc.</td>
+                      <td class="tg-859v">25</td>
+                      <td class="tg-7zrl">Xcek Energy</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">3</td>
+                      <td class="tg-7zrl">Dollar General</td>
+                      <td class="tg-859v">15</td>
+                      <td class="tg-7zrl">Lone Star Logistics LLC</td>
+                      <td class="tg-859v">26</td>
+                      <td class="tg-7zrl">Amazon</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">4</td>
+                      <td class="tg-7zrl">Costco</td>
+                      <td class="tg-859v">16</td>
+                      <td class="tg-7zrl">Western Industrial Contractors Inc.</td>
+                      <td class="tg-859v">27</td>
+                      <td class="tg-7zrl">Lowes</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">5</td>
+                      <td class="tg-7zrl">Kroger</td>
+                      <td class="tg-859v">17</td>
+                      <td class="tg-7zrl">MAI Mechanical, LLC</td>
+                      <td class="tg-859v">28</td>
+                      <td class="tg-7zrl">Gaylord Resort</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">6</td>
+                      <td class="tg-7zrl">Microsoft</td>
+                      <td class="tg-859v">18</td>
+                      <td class="tg-7zrl">FTI</td>
+                      <td class="tg-859v">29</td>
+                      <td class="tg-7zrl">Global Parcel Delivery</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">7</td>
+                      <td class="tg-7zrl">Fedex</td>
+                      <td class="tg-859v">19</td>
+                      <td class="tg-7zrl">Allied Insulation</td>
+                      <td class="tg-859v">30</td>
+                      <td class="tg-7zrl">Flight Safety International</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">8</td>
+                      <td class="tg-7zrl">Walmart</td>
+                      <td class="tg-859v">20</td>
+                      <td class="tg-7zrl">Fraser Trucking Inc.</td>
+                      <td class="tg-859v">31</td>
+                      <td class="tg-7zrl">Hyatt Place Hotel</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">9</td>
+                      <td class="tg-7zrl">Shamrock Foods</td>
+                      <td class="tg-859v">21</td>
+                      <td class="tg-7zrl">Ceva Logistics</td>
+                      <td class="tg-859v">32</td>
+                      <td class="tg-7zrl">GE Haier</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">10</td>
+                      <td class="tg-7zrl">Karcher</td>
+                      <td class="tg-859v">22</td>
+                      <td class="tg-7zrl">Whole Foods</td>
+                      <td class="tg-859v">33</td>
+                      <td class="tg-7zrl">McLane</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-859v">11</td>
+                      <td class="tg-7zrl">Coca-Cola</td>
+                      <td class="tg-859v">23</td>
+                      <td class="tg-7zrl">Towneplace Suites</td>
+                      <td class="tg-859v">34</td>
+                      <td class="tg-7zrl">TJX</td>
+                    </tr>
+                  </tbody></table>
+            </div>
+            <div id="residentiali" class="nonDisplay">
+                <img src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Residential.png" />
+                <style type="text/css">
+                  .tg  {border-collapse:collapse;border-spacing:0;}
+                  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                    font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+                  .tg .tg-mivg{background-color:#CEDAE0;text-align:left;vertical-align:bottom}
+                  .tg .tg-r74l{background-color:#E6E6E6;text-align:left;vertical-align:bottom}
+                  .tg .tg-u84o{font-weight:bold;text-align:left;text-decoration:underline;vertical-align:bottom}
+                  .tg .tg-p1ht{background-color:#E6E6E6;color:#7F7C7A;font-weight:bold;text-align:left;vertical-align:bottom}
+                  .tg .tg-188h{background-color:#CEDAE0;color:#527080;font-weight:bold;text-align:left;vertical-align:bottom}
+                  </style>
+                  <table class="tg"><thead>
+                    <tr>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                      <th class="tg-u84o">Category</th>
+                      <th class="tg-u84o"></th>
+                      <th class="tg-u84o">Name</th>
+                    </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">1</td>
+                      <td class="tg-r74l">Peña Station NEXT</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">15</td>
+                      <td class="tg-r74l">Green Valley Ranch East</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">2</td>
+                      <td class="tg-r74l">Altaria @ High Point</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">16</td>
+                      <td class="tg-r74l">Green Valley Ranch</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">3</td>
+                      <td class="tg-r74l">High Point</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">17</td>
+                      <td class="tg-r74l">Incline 45</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">4</td>
+                      <td class="tg-r74l">High Point - The Grove</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">18</td>
+                      <td class="tg-r74l">Gateway GVR</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">5</td>
+                      <td class="tg-r74l">Painted Prairie</td>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">19</td>
+                      <td class="tg-r74l">First Creek Village</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">6</td>
+                      <td class="tg-r74l">East Range Crossing</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">20</td>
+                      <td class="tg-mivg">Sky View @ High Point</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">7</td>
+                      <td class="tg-r74l">Wildhorse Ridge</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">21</td>
+                      <td class="tg-mivg">Hilltop at DIA</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">8</td>
+                      <td class="tg-r74l">First Creek</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">22</td>
+                      <td class="tg-mivg">Sky Dance</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">9</td>
+                      <td class="tg-r74l">Singletree</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">23</td>
+                      <td class="tg-mivg">Banyan High Point</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">10</td>
+                      <td class="tg-r74l">First Creek Farm</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">24</td>
+                      <td class="tg-mivg">Alexan Pena Station</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">11</td>
+                      <td class="tg-r74l">Courtland</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">25</td>
+                      <td class="tg-mivg">Cottages at Gateway</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">12</td>
+                      <td class="tg-r74l">Meadows at Dunkirk</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">26</td>
+                      <td class="tg-mivg">Vista Creek</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">13</td>
+                      <td class="tg-r74l">Reserve Green Valley Ranch</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">27</td>
+                      <td class="tg-mivg">Windler Homestead</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-r74l">Existing</td>
+                      <td class="tg-p1ht">14</td>
+                      <td class="tg-r74l">Aurora Highlands</td>
+                      <td class="tg-mivg">Future</td>
+                      <td class="tg-188h">28</td>
+                      <td class="tg-mivg">Alberta Development Land</td>
+                    </tr>
+                  </tbody></table>
+            </div>
+            <div id="amenitiesi" class="nonDisplay">
+              <img src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Amenities.png" />
+            </div>
+            <img id="plannedAccessi" class="midLayer nonDisplay" src="https://denalilogisticspark.com/wp-content/uploads/2024/08/PlannedAccess.png" />
+            <img id="sitei" class="topLayer nonDisplay mapToggle2" src="https://denalilogisticspark.com/wp-content/uploads/2024/08/Site2.png" />
+        </div>
+    </div>
+    <div id="navBox">
+        <h4 id="site" class="cls-9 buttonToggle2" tabindex="2"> 
+          Site
+        </h4>
+        <h4 id="roads" class="cls-9" tabindex="1"> 
+            Roads & Access
+        </h4>
+        <h4 id="plannedAccess" class="cls-9" tabindex="1"> 
+            Planned Access
+        </h4>
+        <hr />
+        <h4 id="parks" class="cls-8" tabindex="3"> 
+            Industrial Parks
+        </h4>
+        <h4 id="occupiers" class="cls-8" tabindex="4"> 
+            Occupiers
+        </h4>
+        <h4 id="residential" class="cls-8" tabindex="4"> 
+            Residential
+        </h4>
+        <h4 id="amenities" class="cls-8" tabindex="4"> 
+          Amenities
+      </h4>
+    </div>
+</div>
+
+<script>
+            
+    function myFunction() {
+        var thisId = event.srcElement.id;
+        var imgID = thisId.toString().concat("i");
+        var element = document.getElementById(imgID);
+        var clear = document.getElementsByClassName("mapToggle");
+        var clear2 = document.getElementsByClassName("buttonToggle");
+
+        if (element.classList.contains("mapToggle")) {
+            element.classList.toggle("mapToggle");
+            event.srcElement.classList.toggle("buttonToggle");
+        } else {
+        for (let i = 0; i < clear.length; i++) {
+            clear[i].classList.toggle("mapToggle");
+        }
+        for (let i = 0; i < clear2.length; i++) {
+            clear2[i].classList.toggle("buttonToggle");
+        }
+        
+        element.classList.toggle("mapToggle");
+        event.srcElement.classList.toggle("buttonToggle");
+    }
+        
+    }
+
+    function myFunction2() {
+        var thisId2 = event.srcElement.id;
+        var imgID2 = thisId2.toString().concat("i");
+        var element2 = document.getElementById(imgID2);
+        element2.classList.toggle("mapToggle2");
+        event.srcElement.classList.toggle("buttonToggle2");
+    }
+
+
+    var clickClass = document.getElementsByClassName("cls-8");
+    for (let n = 0; n < clickClass.length; n++) {
+        clickClass[n].addEventListener("click", myFunction);
+    }
+
+    var clickClass2 = document.getElementsByClassName("cls-9");
+    for (let n = 0; n < clickClass2.length; n++) {
+        clickClass2[n].addEventListener("click", myFunction2);
+    }
+    
+</script>
+
+
+</body>
